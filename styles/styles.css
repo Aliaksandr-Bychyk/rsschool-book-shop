@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('section-header.css');
 * {
   margin: 0;
 }
@@ -9,25 +11,7 @@ body {
   display: flex;
   flex-direction: column;
   height: 100%;
-}
-header {
-  height: 80px;
-  flex: 0 0 auto;
-  background-color: #faea68;
-}
-.rss-logo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: fit-content;
-  font-family: 'Nunito Sans', sans-serif;
-}
-.rss-logo h1 {
-  font-weight: 800;
-}
-.rss-logo span {
-  font-weight: 700;
-  font-size: 18px;
+  scroll-behavior: smooth;
 }
 main {
   flex: 1 0 auto;
