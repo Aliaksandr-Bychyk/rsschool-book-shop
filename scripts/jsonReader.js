@@ -2,7 +2,7 @@ import cardConstructor from "./cardConsturctor.js"
 
 export default function jsonReader() {
   let cardsContainer = document.querySelector('.cards-container');
-  fetch('../assets/books.json')
+  fetch('./assets/books.json')
     .then(response => {
         return response.json();
     })
