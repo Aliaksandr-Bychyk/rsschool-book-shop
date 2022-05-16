@@ -21,7 +21,7 @@ export default function cardConstructor(author, imgLink, title, price, descripti
   h3.textContent = author;
 
   let h4 = document.createElement('h4');
-  h4.textContent = `$${price}`;
+  h4.textContent = `Price: $${price}`;
 
   let buttonContainer = document.createElement('div');
   buttonContainer.classList.add('buttons-container')
