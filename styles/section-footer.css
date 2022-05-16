@@ -1,0 +1,29 @@
+#footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 0 0 auto;
+  height: 100px;
+  background-color: black;
+  color: #faea68;
+  font-family: 'Roboto', sans-serif;
+}
+.gh-link{
+  margin-left: 80px;
+  color: #faea68;
+  text-decoration: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+#footer h2 {
+  font-size: 20px;
+}
+.up-link {
+  margin-right: 80px;
+  background-image: url('../assets/svg/up.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+}
