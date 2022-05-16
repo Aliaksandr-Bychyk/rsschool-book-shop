@@ -35,7 +35,7 @@
 .card {
   display: flex;
   width: 550px;
-  height: 300px;
+  height: 380px;
   transition: 0.3s;
   border-radius: 5px;
   user-select: none;
@@ -128,7 +128,8 @@
 }
 .drop-message {
   position: sticky;
-  margin: auto;
+  top: 40%;
+  margin: 100px auto;
   align-self: center;
   width: fit-content;
   color: #afafaf;
