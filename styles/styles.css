@@ -3,6 +3,7 @@
 @import url('section-header.css');
 @import url('section-catalog.css');
 @import url('section-footer.css');
+@import url('popup.css');
 * {
   margin: 0;
 }

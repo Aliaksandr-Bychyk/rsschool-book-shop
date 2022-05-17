@@ -1,3 +1,4 @@
+import popupConstructor from "./popupConstructor.js";
 export default function cardConstructor(author, imgLink, title, price, description) {
   
   let card = document.createElement('div');
@@ -34,6 +35,7 @@ export default function cardConstructor(author, imgLink, title, price, descripti
   let buttonRead = document.createElement('button')
   buttonRead.classList.add('btn-read');
   buttonRead.setAttribute('title', 'Read more');
+  buttonRead.addEventListener("click", () => popupConstructor(author, title, description))
 
   buttonContainer.append(buttonAdd);
   buttonContainer.append(buttonRead);
