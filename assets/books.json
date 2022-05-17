@@ -4,21 +4,21 @@
     "imageLink": "assets/images/books/book-1.jpg",
     "title": "JavaScript: The Good Parts",
     "price": 30,
-    "description": "With JavaScript: The Good Parts, you'll discover a beautiful, elegant, lightweight and highly expressive language that lets you create effective code, whether you're managing object libraries or just trying to get Ajax to run fast. If you develop sites or applications for the Web, this book is an absolute must"
+    "description": "With JavaScript: The Good Parts, you'll discover a beautiful, elegant, lightweight and highly expressive language that lets you create effective code, whether you're managing object libraries or just trying to get Ajax to run fast. If you develop sites or applications for the Web, this book is an absolute must."
   },
   {
     "author": "David Herman",
     "imageLink": "assets/images/books/book-2.jpg",
     "title": "Effective JavaScript: 68 Specific Ways to Harness the Power of JavaScript",
     "price": 22,
-    "description": "Effective JavaScript is organized around 68 proven approaches for writing better JavaScript, backed by concrete examples. You’ll learn how to choose the right programming style for each project, manage unanticipated problems, and work more successfully with every facet of JavaScript programming from data structures to concurrency"
+    "description": "Effective JavaScript is organized around 68 proven approaches for writing better JavaScript, backed by concrete examples. You’ll learn how to choose the right programming style for each project, manage unanticipated problems, and work more successfully with every facet of JavaScript programming from data structures to concurrency."
   },
   {
     "author": "David Flanagan",
     "imageLink": "assets/images/books/book-3.jpg",
     "title": "JavaScript: The Definitive Guide",
     "price": 40,
-    "description": "This Fifth Edition is completely revised and expanded to cover JavaScript as it is used in today's Web 2.0 applications. This book is both an example-driven programmer's guide and a keep-on-your-desk reference, with new chapters that explain everything you need to know to get the most out of JavaScript"
+    "description": "This Fifth Edition is completely revised and expanded to cover JavaScript as it is used in today's Web 2.0 applications. This book is both an example-driven programmer's guide and a keep-on-your-desk reference, with new chapters that explain everything you need to know to get the most out of JavaScript."
   },
   {
     "author": " Eric Elliott",
@@ -49,7 +49,7 @@
     "description": "If you want to learn how to build efficient React applications, this is your book. Ideal for web developers and software engineers who understand how JavaScript, CSS, and HTML work in the browser, this updated edition provides best practices and patterns for writing modern React code. No prior knowledge of React or functional JavaScript is necessary."
   },
   {
-    "author": "Bradley Meck Alex Young and Mike Cantelon",
+    "author": "Bradley Meck, Alex Young and Mike Cantelon",
     "imageLink": "assets/images/books/book-8.jpg",
     "title": "Node.js in Action",
     "price": 38,

@@ -1,4 +1,5 @@
 import popupConstructor from "./popupConstructor.js";
+import stage from "./stage.js";
 export default function cardConstructor(author, imgLink, title, price, description) {
   
   let card = document.createElement('div');
@@ -31,11 +32,12 @@ export default function cardConstructor(author, imgLink, title, price, descripti
   buttonAdd.classList.add('btn-add');
   buttonAdd.setAttribute('title', 'Add to cart');
   buttonAdd.textContent = 'ADD TO CART'
+  buttonAdd.addEventListener('click', () => stage(title, author, price, imgLink));
 
   let buttonRead = document.createElement('button')
   buttonRead.classList.add('btn-read');
   buttonRead.setAttribute('title', 'Read more');
-  buttonRead.addEventListener("click", () => popupConstructor(author, title, description))
+  buttonRead.addEventListener('click', () => popupConstructor(author, title, description, imgLink))
 
   buttonContainer.append(buttonAdd);
   buttonContainer.append(buttonRead);

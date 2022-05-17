@@ -1,4 +1,4 @@
-export default function popupConstructor(author, title, description) {
+export default function popupConstructor(author, title, description, imgLink) {
 
   let main = document.querySelector('main');
   let popupBackdrop = document.createElement('div');
@@ -6,6 +6,10 @@ export default function popupConstructor(author, title, description) {
 
   let popup = document.createElement('div');
   popup.classList.add('popup');
+
+  let img = document.createElement('img');
+  img.src = imgLink;
+  img.setAttribute('alt', title);
 
   let popupContainer = document.createElement('div');
   popupContainer.classList.add('popup-container');
@@ -27,9 +31,8 @@ export default function popupConstructor(author, title, description) {
   popupContainer.append(div)
   popupContainer.append(p)
 
+  popup.append(img);
   popup.append(popupContainer);
-
-  // popupBackdrop.append(popup);
 
   popupBackdrop.addEventListener('click', (e) => {
     popupBackdrop.style.opacity = 0;

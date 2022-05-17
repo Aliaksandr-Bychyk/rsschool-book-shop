@@ -26,4 +26,11 @@
   height: 40px;
   width: 40px;
   cursor: pointer;
+  transition: 0.3s;
+}
+.up-link:hover {
+  transform: scale(120%);
+}
+.up-link:active {
+  transform: scale(80%);
 }
