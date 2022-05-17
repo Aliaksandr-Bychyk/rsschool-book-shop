@@ -29,12 +29,17 @@ export default function popupConstructor(author, title, description) {
 
   popup.append(popupContainer);
 
-  popupBackdrop.append(popup);
+  // popupBackdrop.append(popup);
 
   popupBackdrop.addEventListener('click', (e) => {
-    e.target.style.opacity = 0;
-    setTimeout(() => e.target.remove(), 300);
+    popupBackdrop.style.opacity = 0;
+    popup.style.opacity = 0;
+    setTimeout(() => {
+      popupBackdrop.remove()
+      popup.remove()
+    }, 300);
   })
 
+  main.prepend(popup);
   main.prepend(popupBackdrop);
 }

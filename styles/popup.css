@@ -3,9 +3,6 @@
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.4);
   position: fixed;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   cursor: pointer;
   animation-name: showBackdrop;
   animation-duration: 0.3s;
@@ -20,6 +17,11 @@
   }
 }
 .popup {
+  display: flex;
+  position: fixed;
+  margin: auto;
+  left: 25%;
+  top: 20%;
   width: 50%;
   height: fit-content;
   background-color: #ffffff;

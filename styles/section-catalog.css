@@ -134,6 +134,7 @@
   align-self: center;
   width: fit-content;
   color: #afafaf;
+  pointer-events: none;
 }
 .drop-icon {
   margin: auto;
