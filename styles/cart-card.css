@@ -1,0 +1,47 @@
+.cart-card {
+  display: flex;
+  height: 220px;
+  transition: 0.3s;
+  user-select: none;
+  justify-content: space-between;
+  overflow: hidden;
+  font-family: 'Roboto', sans-serif;
+  background-color: #ffffff;
+  border-radius: 0;
+}
+.delete-area {
+  width: 24px;
+  height: 100%;
+  background-image: url('../assets/svg/delete.svg');
+  background-size: 70%;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  transition: 0.3s;
+}
+.delete-area:hover {
+  cursor: pointer;
+  background-color: #d53369;
+}
+.cart-card img {
+  margin: auto 0;
+  height: 200px;
+}
+.cart-card-info {
+  display: flex;
+  flex-direction: column;
+}
+.cart-card-info h2 {
+  width: 270px;
+  margin: 10px 10px 0 0;
+  font-size: 22px;
+}
+.cart-card-info h3 {
+  margin: 0 10px 30px 0;
+  font-size: 16px;
+  color: #6d6d6d;
+}
+.cart-card-info h4 {
+  font-size: 22px;
+  margin: auto 10px 10px 0;
+}

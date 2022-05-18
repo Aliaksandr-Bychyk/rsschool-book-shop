@@ -39,17 +39,16 @@ export default function cardConstructor(author, imgLink, title, price, descripti
   buttonRead.setAttribute('title', 'Read more');
   buttonRead.addEventListener('click', () => popupConstructor(author, title, description, imgLink))
 
-  buttonContainer.append(buttonAdd);
   buttonContainer.append(buttonRead);
+  buttonContainer.append(buttonAdd);
 
   cardInfo.append(h2);
   cardInfo.append(h3);
   cardInfo.append(h4);
-  cardInfo.append(buttonContainer);
 
-  card.append(dragArea);
   card.append(img);
   card.append(cardInfo);
+  card.append(buttonContainer);
 
   return card;
 
