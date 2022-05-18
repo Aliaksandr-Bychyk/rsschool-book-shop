@@ -1,0 +1,142 @@
+#checkout main {
+  background-color: #faea68;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.payment {
+  width: 750px;
+  height: 750px;
+  background-color: #ffffff;
+  box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+.payment-container {
+  margin: 10px;
+  height: 730px;
+  display: flex;
+  flex-direction: column;
+}
+.logo-container {
+  display: flex;
+  border-bottom: solid #d53369 2px;
+}
+.payment-icon {
+  display: inline-block;
+  background-image: url('../assets/svg/payment.svg');
+  background-size: contain;
+  background-size: 60%;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 48px;
+  height: 48px;
+}
+.payment-container h1 {
+  display: inline-block;
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+}
+.pay-button-container {
+  display: flex;
+  justify-content: space-between;
+}
+.btn {
+  width: 200px;
+  margin: 10px;
+  height: 40px;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  line-height: 40px;
+  text-decoration: none;
+  font-size: 22px;
+  font-weight: 600;
+
+  border: solid transparent 1px;
+  border-radius: 10px;
+
+  cursor: pointer;
+  transition: 0.3s;
+}
+.btn.--cancel {
+  color: #d53369;
+}
+.btn.--submit {
+  color: #fff;
+  background-image: linear-gradient(to right, #d53369 0%, #d6a53b 50%, #d53369 80%);
+  background-size: 200% auto;
+}
+.btn.--cancel:hover {
+  border: solid #d53369 1px;
+}
+.btn.--submit:hover {
+  background-position: right center; 
+}
+.btn.--submit:disabled {
+  cursor: auto;
+  background-image: none;
+  background-color: #6d6d6d;
+}
+
+.items-container {
+  flex-grow: 1;
+  margin: 10px 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #ebebeb;
+  overflow-y: scroll;
+  border-radius: 10px 10px 10px 10px;
+}
+.item {
+  display: grid;
+  padding: 5px 0;
+  grid-template-columns: 30px 330px 270px auto;
+  text-align: center;
+  border-bottom: solid #6d6d6d 1px;
+}
+.item:last-child {
+  border-bottom: none;
+}
+.item span {
+  line-height: 100%;
+  font-size: 16px;
+  font-weight: 600;
+}
+.item h2 {
+  font-size: 16px;
+  text-align: justify;
+}
+.item h3 {
+  font-size: 16px;
+}
+.item h4 {
+  font-size: 16px;
+}
+
+.delivery-container {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(3, auto);
+}
+.input-block {
+  display: flex;
+  flex-direction: column;
+}
+input {
+  height: 18px;
+  padding: 5px;
+  border: solid transparent 2px;
+  border-radius: 3px;
+}
+input:valid {
+  border-color: green;
+}
+input:invalid {
+  border-color: red;
+}
+::-webkit-datetime-edit {
+  font-family: 'Roboto', sans-serif;
+  font-size: 12px;
+  color: rgb(117, 117, 117);
+}

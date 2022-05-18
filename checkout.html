@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" data-page="checkout">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="shortcut icon" href="assets/svg/favicon-payment.svg" type="image/x-icon">
+    <script type="module" src="scripts/index.js"></script>
+    <title>RS Payment</title>
+  </head>
+<body id="checkout">
+  <main>
+    <div class="payment">
+      <div class="payment-container">
+        <div class="logo-container">
+          <i class="payment-icon"></i>
+          <h1>RS Payment</h1>
+        </div>
+        <div class="items-container">
+        </div>
+        <form class="delivery-container" id="delivety-form">
+          <div class="input-block">
+            <label for="input-name">Your name:</label>
+            <input placeholder="Name" id="input-name" minlength="4" required>
+          </div>
+          <div class="input-block">
+            <label for="input-surname">Your surname:</label>
+            <input placeholder="Surname" id="input-surname" minlength="5" required>
+          </div>
+          <div class="input-block">
+            <label for="input-date">Choose delivery date:</label>
+            <input type="date" id="input-date" min="2022-05-19" required>
+          </div>
+          <div class="input-block">
+            <label for="input-street">Your street:</label>
+            <input placeholder="Street" id="input-street" minlength="5" required>
+          </div>
+          <div class="input-block">
+            <label for="input-house">Your house number:</label>
+            <input type="number" placeholder="House number" min="0" id="input-house" required>
+          </div>
+          <div class="input-block">
+            <label for="input-flat">Your flat number:</label>
+            <input placeholder="Flat number" id="input-flat" type="text" pattern="[0-9]+([-\,][0-9]+)?" required>
+          </div>
+          <div class="input-block">
+            <span>Choose the payment type:</span>
+            <div>
+              <input type="radio" id="input-cash" name="pay" checked>
+              <label for="input-cash">Cash</label>
+              <input type="radio" id="input-card" name="pay">
+              <label for="input-card">Card</label>
+            </div>
+          </div>
+        </form>
+        <div class="pay-button-container">
+          <button class="btn --cancel" >Cancel order</button>
+          <button class="btn --submit" form="delivety-form">Submit order</button>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

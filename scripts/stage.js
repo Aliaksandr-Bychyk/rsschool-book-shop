@@ -1,5 +1,5 @@
 import updateCart from './updateCart.js'
-export default function stage(author, title, price, imgLink) {
+export default function stage(title, author, price, imgLink) {
   if (window.stage.length > 0) {
     for (let i = 0; i < window.stage.length; i++) {
       if (window.stage[i].title == title) {
