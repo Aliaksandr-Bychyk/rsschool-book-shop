@@ -1,8 +1,9 @@
-export default function stage(author, title, description) {
+import updateCart from './updateCart.js'
+export default function stage(author, title, price, imgLink) {
   if (window.stage.length > 0) {
     for (let i = 0; i < window.stage.length; i++) {
       if (window.stage[i].title == title) {
-        window.stage[i].count++;
+        updateCart();
         return
       }
     }
@@ -10,9 +11,10 @@ export default function stage(author, title, description) {
   let obj = {
     'author': author,
     'title': title,
-    'description': description,
-    'count': 1 
+    'price': price,
+    'imgLink': imgLink,
   }
   window.stage.push(obj)
+  updateCart();
   return
 }

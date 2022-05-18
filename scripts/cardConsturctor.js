@@ -5,10 +5,6 @@ export default function cardConstructor(author, imgLink, title, price, descripti
   let card = document.createElement('div');
   card.classList.add('card');
 
-  let dragArea = document.createElement('div');
-  dragArea.classList.add('drag-area');
-  dragArea.setAttribute('title', 'Drag here');
-
   let img = document.createElement('img');
   img.setAttribute('src', imgLink);
   img.setAttribute('alt', title);

@@ -44,7 +44,6 @@
   display: none;
 }
 .drop-message {
-  position: sticky;
   top: 40%;
   margin: 100px auto;
   align-self: center;
@@ -67,15 +66,28 @@
   display: flex;
   flex-direction: column;
   justify-content: end;
-  height: 120px;
   background-color: #ffffff;
   border-radius: 0 0 10px 10px;
   font-size: 16px;
-  gap: 10px;
+}
+.total-container hr {
+  width: 80%;
+  margin: 10px auto;
+  border-color: #d53369;
+  border-style: solid
+}
+.total-cost-container {
+  display: flex;
+  justify-content: space-between;
+}
+.total-container span {
+  margin: 0 20px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 22px;
+  font-weight: bold;
 }
 .btn-check {
-  margin-left: auto;
-  width: 100%;
+  margin: 10px;
   height: 50px;
 
   font-family: 'Roboto', sans-serif;

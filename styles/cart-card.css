@@ -1,3 +1,6 @@
+.cart-card:first-child {
+  border-radius: 10px 10px 0 0;
+}
 .cart-card {
   display: flex;
   height: 220px;
@@ -30,6 +33,7 @@
 .cart-card-info {
   display: flex;
   flex-direction: column;
+  width: 280px;
 }
 .cart-card-info h2 {
   width: 270px;
