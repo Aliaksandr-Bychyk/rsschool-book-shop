@@ -2,8 +2,11 @@ import popupConstructor from "./popupConstructor.js";
 import stage from "./stage.js";
 export default function cardConstructor(author, imgLink, title, price, description) {
   
+  let dropArea = document.querySelector('.drop-area')
+
   let card = document.createElement('div');
   card.classList.add('card');
+  card.draggable = true;
 
   let img = document.createElement('img');
   img.setAttribute('src', imgLink);
@@ -46,6 +49,14 @@ export default function cardConstructor(author, imgLink, title, price, descripti
   card.append(cardInfo);
   card.append(buttonContainer);
 
-  return card;
+  dropArea.addEventListener('dragover', (e) => e.preventDefault());
+  card.addEventListener('dragstart', (e) => {
+    e.dataTransfer.setData('drag', JSON.stringify([title, author, price, imgLink]))
+  })
+  dropArea.addEventListener('drop', (e) => {
+    let drop = JSON.parse(e.dataTransfer.getData('drag'));
+    stage(drop[0], drop[1], drop[2], drop[3]);
+  })
 
+  return card;
 }
