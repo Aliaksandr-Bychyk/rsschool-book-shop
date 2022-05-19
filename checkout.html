@@ -10,56 +10,75 @@
     <title>RS Payment</title>
   </head>
 <body id="checkout">
-  <main>
-    <div class="payment">
-      <div class="payment-container">
-        <div class="logo-container">
-          <i class="payment-icon"></i>
-          <h1>RS Payment</h1>
-        </div>
-        <div class="items-container">
-        </div>
-        <form class="delivery-container" id="delivety-form">
+  <!-- <main>
+    <div class="payment"> `
+      <div class="payment-container"> `
+        <form class="delivery-container" id="delivery-form">
           <div class="input-block">
-            <label for="input-name">Your name:</label>
-            <input placeholder="Name" id="input-name" minlength="4" required>
+            <label id="label-required" for="input-name">First name:</label>
+            <input id="input-name" pattern="[A-Za-z]{4,}" required>
           </div>
           <div class="input-block">
-            <label for="input-surname">Your surname:</label>
-            <input placeholder="Surname" id="input-surname" minlength="5" required>
+            <label id="label-required" for="input-surname">Last name:</label>
+            <input id="input-surname" pattern="[A-Za-z]{5,}" required>
           </div>
           <div class="input-block">
-            <label for="input-date">Choose delivery date:</label>
+            <label id="label-required" for="input-date">Delivery date:</label>
             <input type="date" id="input-date" min="2022-05-19" required>
           </div>
           <div class="input-block">
-            <label for="input-street">Your street:</label>
-            <input placeholder="Street" id="input-street" minlength="5" required>
+            <label id="label-required" for="input-street">Street:</label>
+            <input id="input-street" minlength="5" required>
           </div>
           <div class="input-block">
-            <label for="input-house">Your house number:</label>
-            <input type="number" placeholder="House number" min="0" id="input-house" required>
+            <label id="label-required" for="input-house">House number:</label>
+            <input id="input-house" pattern="^\d+$" required>
           </div>
           <div class="input-block">
-            <label for="input-flat">Your flat number:</label>
-            <input placeholder="Flat number" id="input-flat" type="text" pattern="[0-9]+([-\,][0-9]+)?" required>
+            <label id="label-required" for="input-flat">Flat number:</label>
+            <input id="input-flat" pattern="^(\d+-?)+\d+$" required>
           </div>
           <div class="input-block">
-            <span>Choose the payment type:</span>
+            <span id="label-required">Choose 2 gifts:</span>
+            <div>
+              <input type="checkbox" id="input-gift" name="gift">
+              <label for="input-gift">Pack as a gift</label>
+            </div>
+            <div>
+              <input type="checkbox" id="input-postcard" name="gift">
+              <label for="input-postcard">Add postcard</label>
+            </div>
+            <div>
+              <input type="checkbox" id="input-discount" name="gift">
+              <label for="input-discount">2% discount to the next time</label>
+            </div>
+            <div>
+              <input type="checkbox" id="input-pen" name="gift">
+              <label for="input-pen">Branded pen or pencil</label>
+            </div>
+          </div>
+          <div class="input-block">
+            <span id="label-required">Payment type:</span>
             <div>
               <input type="radio" id="input-cash" name="pay" checked>
               <label for="input-cash">Cash</label>
-              <input type="radio" id="input-card" name="pay">
-              <label for="input-card">Card</label>
             </div>
+            <div>
+              <input type="radio" id="input-card" name="pay">
+              <label for="input-card">Card (Visa, MasterCard)</label>
+            </div>
+          </div>
+          <div class="input-block">
+            <span id="label-cost">Total cost:</span>
+            <span class="total-cost">$52</span>
           </div>
         </form>
         <div class="pay-button-container">
           <button class="btn --cancel" >Cancel order</button>
-          <button class="btn --submit" form="delivety-form">Submit order</button>
+          <button class="btn --submit" form="delivery-form">Submit order</button>
         </div>
       </div>
     </div>
-  </main>
+  </main> -->
 </body>
 </html>
