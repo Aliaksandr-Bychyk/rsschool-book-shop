@@ -2,6 +2,7 @@ import checkValidation from "./checkValidation.js";
 import orderCreated from "./orderCreated.js";
 
 export default function checkoutRender() {
+  document.body.id = "checkout";
   let main = document.createElement('main');
   
   let payment = document.createElement('div');

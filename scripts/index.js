@@ -1,8 +1,10 @@
 import checkoutItemConstructor from "./checkoutItemConstructor.js";
 import checkoutRender from "./checkoutRender.js";
 import jsonReader from "./jsonReader.js";
+import mainRender from "./mainRender.js";
 let html = document.querySelector('html');
-if (html.dataset.page == 'index') {
+if (html.dataset.page == 'main') {
+  document.body.append(mainRender());
   window.stage = [];
   jsonReader();
 } else {
