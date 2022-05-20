@@ -18,7 +18,7 @@ export default function totalConstructor(cost) {
   button.textContent = 'Check out';
   button.addEventListener('click', () => {
     sessionStorage.setItem('stage', JSON.stringify(window.stage));
-    window.location.href='/checkout.html';
+    window.location.href='./checkout.html';
   });
 
   totalCostContainer.append(totalText);
