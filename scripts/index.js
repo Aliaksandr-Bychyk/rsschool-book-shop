@@ -11,7 +11,7 @@ if (html.dataset.page == 'main') {
   document.body.append(checkoutRender());
   window.stage = JSON.parse(sessionStorage.getItem('stage'));
   if (window.stage == null ) {
-    window.location.href = './'
+    window.location.href = './rsschool-book-shop/'
   }
   let itemsContainer = document.querySelector('.items-container');
   let totalCost = 0;
