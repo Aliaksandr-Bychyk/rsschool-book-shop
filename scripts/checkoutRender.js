@@ -1,3 +1,5 @@
+import checkValidation from "./checkValidation.js";
+
 export default function checkoutRender() {
   let main = document.createElement('main');
   
@@ -88,9 +90,17 @@ function renderInputName() {
   input.id = 'input-name';
   input.pattern = '[A-Za-z]{4,}';
   input.required = true;
+  input.classList.add('validate');
+  input.autocomplete = 'off';
+  input.addEventListener('input', () => checkValidation());
+
+  let validationError = document.createElement('span')
+  validationError.classList.add('validation-error');
+  validationError.textContent = 'The field is invalid';
 
   inputBlock.append(label);
   inputBlock.append(input);
+  inputBlock.append(validationError);
   return inputBlock;
 }
 
@@ -107,9 +117,17 @@ function renderInputSurname() {
   input.id = 'input-surname';
   input.pattern = '[A-Za-z]{5,}';
   input.required = true;
+  input.classList.add('validate')
+  input.autocomplete = 'off';
+  input.addEventListener('input', () => checkValidation());
+
+  let validationError = document.createElement('span')
+  validationError.classList.add('validation-error');
+  validationError.textContent = 'The field is invalid';
 
   inputBlock.append(label);
   inputBlock.append(input);
+  inputBlock.append(validationError);
   return inputBlock;
 }
 
@@ -130,9 +148,17 @@ function renderInputDate() {
   let patternDate = [date.getFullYear(), ('0' + (date.getMonth() + 1)).slice(-2), date.getDate()].join('-')
   input.min = patternDate;
   input.required = true;
+  input.classList.add('validate')
+  input.autocomplete = 'off';
+  input.addEventListener('input', () => checkValidation());
+
+  let validationError = document.createElement('span')
+  validationError.classList.add('validation-error');
+  validationError.textContent = 'The field is invalid';
 
   inputBlock.append(label);
   inputBlock.append(input);
+  inputBlock.append(validationError);
   return inputBlock;
 }
 
@@ -149,9 +175,17 @@ function renderInputStreet() {
   input.id = 'input-street';
   input.minLength = '5';
   input.required = true;
+  input.classList.add('validate')
+  input.autocomplete = 'off';
+  input.addEventListener('input', () => checkValidation());
+
+  let validationError = document.createElement('span')
+  validationError.classList.add('validation-error');
+  validationError.textContent = 'The field is invalid';
 
   inputBlock.append(label);
   inputBlock.append(input);
+  inputBlock.append(validationError);
   return inputBlock;
 }
 
@@ -168,9 +202,17 @@ function renderInputHouse() {
   input.id = 'input-house';
   input.pattern = '^\\d+$';
   input.required = true;
+  input.classList.add('validate')
+  input.autocomplete = 'off';
+  input.addEventListener('input', () => checkValidation());
+
+  let validationError = document.createElement('span')
+  validationError.classList.add('validation-error');
+  validationError.textContent = 'The field is invalid';
 
   inputBlock.append(label);
   inputBlock.append(input);
+  inputBlock.append(validationError);
   return inputBlock;
 }
 
@@ -187,9 +229,17 @@ function renderInputFlat() {
   input.id = 'input-flat';
   input.pattern = '^(\\d+-?)+\\d+$';
   input.required = true;
+  input.classList.add('validate')
+  input.autocomplete = 'off';
+  input.addEventListener('input', () => checkValidation());
+
+  let validationError = document.createElement('span')
+  validationError.classList.add('validation-error');
+  validationError.textContent = 'The field is invalid';
 
   inputBlock.append(label);
   inputBlock.append(input);
+  inputBlock.append(validationError);
   return inputBlock;
 }
 
@@ -198,15 +248,17 @@ function renderInputGift() {
   inputBlock.classList.add('input-block');
   
   let label = document.createElement('span');
-  label.id = 'label-required';
-  label.textContent = 'Choose 2 gifts:'
+  label.id = 'label-cost';
+  label.textContent = 'Choose 2 gifts (optional):'
 
   let divOne = document.createElement('div');
   let inputOne = document.createElement('input');
+  inputOne.classList.add('input-option')
   inputOne.type = 'checkbox';
   inputOne.id = 'input-gift';
   inputOne.name = 'gift';
   inputOne.value = 'gift';
+  inputOne.addEventListener('input', () => checkValidation());
   let labelOne = document.createElement('label');
   labelOne.setAttribute('for', 'input-gift');
   labelOne.textContent = 'Pack as a gift';
@@ -215,10 +267,12 @@ function renderInputGift() {
 
   let divTwo = document.createElement('div');
   let inputTwo = document.createElement('input');
+  inputTwo.classList.add('input-option')
   inputTwo.type = 'checkbox';
   inputTwo.id = 'input-postcard';
   inputTwo.name = 'gift';
   inputTwo.value = 'postcard'
+  inputTwo.addEventListener('input', () => checkValidation());
   let labelTwo = document.createElement('label');
   labelTwo.setAttribute('for', 'input-postcard');
   labelTwo.textContent = 'Add postcard';
@@ -227,10 +281,12 @@ function renderInputGift() {
 
   let divThree = document.createElement('div');
   let inputThree = document.createElement('input');
+  inputThree.classList.add('input-option')
   inputThree.type = 'checkbox';
   inputThree.id = 'input-discount';
   inputThree.name = 'gift';
   inputThree.value = 'discount'
+  inputThree.addEventListener('input', () => checkValidation());
   let labelThree = document.createElement('label');
   labelThree.setAttribute('for', 'input-discount');
   labelThree.textContent = '2% discount to the next time';
@@ -239,10 +295,12 @@ function renderInputGift() {
 
   let divFour = document.createElement('div');
   let inputFour = document.createElement('input');
+  inputFour.classList.add('input-option')
   inputFour.type = 'checkbox';
   inputFour.id = 'input-pen';
   inputFour.name = 'gift';
   inputFour.value = 'pen'
+  inputFour.addEventListener('input', () => checkValidation());
   let labelFour = document.createElement('label');
   labelFour.setAttribute('for', 'input-pen');
   labelFour.textContent = 'Branded pen or pencil';
@@ -268,11 +326,13 @@ function renderInputPayment() {
 
   let divOne = document.createElement('div');
   let inputOne = document.createElement('input');
+  inputOne.classList.add('input-pay-option')
   inputOne.type = 'radio';
   inputOne.id = 'input-cash';
   inputOne.name = 'pay';
   inputOne.value = 'Cash';
   inputOne.checked = true;
+  inputOne.addEventListener('input', () => checkValidation());
   let labelOne = document.createElement('label');
   labelOne.setAttribute('for', 'input-cash');
   labelOne.textContent = 'Cash';
@@ -281,10 +341,12 @@ function renderInputPayment() {
 
   let divTwo = document.createElement('div');
   let inputTwo = document.createElement('input');
+  inputTwo.classList.add('input-pay-option')
   inputTwo.type = 'radio';
   inputTwo.id = 'input-card';
   inputTwo.name = 'pay';
   inputTwo.value = 'Card'
+  inputTwo.addEventListener('input', () => checkValidation());
   let labelTwo = document.createElement('label');
   labelTwo.setAttribute('for', 'input-card');
   labelTwo.textContent = 'Card (Visa, MasterCard)';

@@ -141,12 +141,24 @@ input {
   padding: 5px;
   border: solid transparent 2px;
   border-radius: 3px;
-}
-input:valid {
-  border-color: green;
+  border-color: #6d6d6d;
+  margin-bottom: 18px;
 }
 input:invalid {
   border-color: #d53369;
+  margin-bottom: 0;
+}
+input:invalid ~ .validation-error {
+  display: inline;
+}
+.validation-error {
+  display: none;
+  margin-top: 1px;
+  color: #d53369;
+}
+.input-option,
+.input-pay-option {
+  margin-bottom: 0;
 }
 ::-webkit-datetime-edit {
   font-family: 'Roboto', sans-serif;
