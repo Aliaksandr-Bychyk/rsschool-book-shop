@@ -180,3 +180,27 @@ input:invalid ~ .validation-error {
   display: flex;
   gap: 5px;
 }
+
+.submited-message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  width: 500px;
+}
+.submited-message span {
+  margin: 10px 0;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  text-align: justify;
+}
+.icon-submited {
+  display: inline-block;
+  background-image: url('../assets/svg/ok-circle.svg');
+  background-size: contain;
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 200px;
+  height: 200px;
+}

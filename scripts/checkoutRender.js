@@ -1,4 +1,5 @@
 import checkValidation from "./checkValidation.js";
+import orderCreated from "./orderCreated.js";
 
 export default function checkoutRender() {
   let main = document.createElement('main');
@@ -35,6 +36,7 @@ export default function checkoutRender() {
   buttonSubmit.classList.add('btn', '--submit');
   buttonSubmit.textContent = 'Submit order';
   buttonSubmit.disabled = true;
+  buttonSubmit.addEventListener('click', () => submitOrder());
 
 
   logoContainer.append(paymentIcon);
@@ -374,4 +376,15 @@ function renderInputCost() {
   inputBlock.append(label);
   inputBlock.append(input);
   return inputBlock;
+}
+
+function submitOrder() {
+  let paymentContainer = document.querySelector('.payment-container');
+  let street = document.querySelector('#input-street').value;
+  let house = document.querySelector('#input-house').value;
+  let flat = document.querySelector('#input-flat').value;
+  let firstname = document.querySelector('#input-name').value;
+  let surname = document.querySelector('#input-surname').value;
+  paymentContainer.innerHTML = '';
+  paymentContainer.append(orderCreated(street, house, flat, firstname, surname))
 }
