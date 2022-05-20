@@ -31,7 +31,7 @@ export default function checkoutRender() {
   let buttonCancel = document.createElement('button');
   buttonCancel.classList.add('btn', '--cancel');
   buttonCancel.textContent = 'Cancel order';
-  buttonCancel.addEventListener('click', () => document.location.href = '/')
+  buttonCancel.addEventListener('click', () => window.location.href = './')
 
   let buttonSubmit = document.createElement('button');
   buttonSubmit.classList.add('btn', '--submit');

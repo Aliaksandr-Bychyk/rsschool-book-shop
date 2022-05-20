@@ -16,7 +16,7 @@ export default function orderCreated(street, house, flat, name, surname) {
   button.classList.add('btn');
   button.classList.add('--submit');
   button.textContent = 'Go back';
-  button.addEventListener('click', () => window.location.href = './rsschool-book-shop');
+  button.addEventListener('click', () => window.location.href = './');
 
   submitedMessage.append(icon);
   submitedMessage.append(h1);
