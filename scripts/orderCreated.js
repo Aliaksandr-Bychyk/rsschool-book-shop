@@ -1,5 +1,7 @@
 export default function orderCreated(street, house, flat, name, surname) {
   
+  let docFrag = document.createDocumentFragment();
+
   let submitedMessage = document.createElement('div');
   submitedMessage.classList.add('submited-message');
 
@@ -23,5 +25,7 @@ export default function orderCreated(street, house, flat, name, surname) {
   submitedMessage.append(span);
   submitedMessage.append(button);
 
-  return submitedMessage;
+  docFrag.append(submitedMessage);
+
+  return docFrag;
 }

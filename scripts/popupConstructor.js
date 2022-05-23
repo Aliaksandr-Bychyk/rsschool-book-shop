@@ -1,11 +1,16 @@
 export default function popupConstructor(author, title, description, imgLink) {
 
+  let docFrag = document.createDocumentFragment();
+
   let main = document.querySelector('main');
   let popupBackdrop = document.createElement('div');
   popupBackdrop.classList.add('popup-backdrop');
 
   let popup = document.createElement('div');
   popup.classList.add('popup');
+
+  let buttonClosePopup = document.createElement('i');
+  buttonClosePopup.classList.add('close-popup');
 
   let img = document.createElement('img');
   img.src = imgLink;
@@ -31,18 +36,24 @@ export default function popupConstructor(author, title, description, imgLink) {
   popupContainer.append(div)
   popupContainer.append(p)
 
+  popup.append(buttonClosePopup);
   popup.append(img);
   popup.append(popupContainer);
 
-  popupBackdrop.addEventListener('click', (e) => {
+  popupBackdrop.addEventListener('click', (e) => closePopup())
+  buttonClosePopup.addEventListener('click', (e) => closePopup())
+
+  docFrag.append(popupBackdrop);
+  docFrag.append(popup);
+
+  main.prepend(docFrag);
+  
+  function closePopup() {
     popupBackdrop.style.opacity = 0;
     popup.style.opacity = 0;
     setTimeout(() => {
       popupBackdrop.remove()
       popup.remove()
     }, 300);
-  })
-
-  main.prepend(popup);
-  main.prepend(popupBackdrop);
+  }
 }

@@ -1,4 +1,7 @@
 export default function checkoutItemConstructor(index, title, author, price) {
+  
+  let docFrag = document.createDocumentFragment();
+
   let item = document.createElement('div');
   item.classList.add('item');
 
@@ -16,6 +19,7 @@ export default function checkoutItemConstructor(index, title, author, price) {
   item.append(h2)
   item.append(h3)
   item.append(h4)
+  docFrag.append(item);
 
-  return item;
+  return docFrag;
 }

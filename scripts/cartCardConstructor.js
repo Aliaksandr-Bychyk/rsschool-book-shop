@@ -1,6 +1,8 @@
 import updateCart from './updateCart.js';
 export default function cartCardCounstructor(author, imgLink, title, price) {
   
+  let docFrag = document.createDocumentFragment();
+
   let card = document.createElement('div');
   card.classList.add('cart-card');
 
@@ -42,6 +44,8 @@ export default function cartCardCounstructor(author, imgLink, title, price) {
   card.append(img);
   card.append(cardInfo);
 
-  return card;
+  docFrag.append(card);
+
+  return docFrag;
 
 }

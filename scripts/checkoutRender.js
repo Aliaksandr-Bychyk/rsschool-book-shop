@@ -2,6 +2,9 @@ import checkValidation from "./checkValidation.js";
 import orderCreated from "./orderCreated.js";
 
 export default function checkoutRender() {
+
+  let docFrag = document.createDocumentFragment();
+
   document.body.id = "checkout";
   let main = document.createElement('main');
   
@@ -58,11 +61,13 @@ export default function checkoutRender() {
 
   payment.append(paymentContainer)
   main.append(payment)
+  docFrag.append(main);
 
-  return main
+  return docFrag
 } 
 
 function renderForm() {
+  let docFrag = document.createDocumentFragment();
   let form = document.createElement('form');
   form.classList.add('delivery-container');
   form.id = 'delivery-form';
@@ -77,10 +82,12 @@ function renderForm() {
   form.append(renderInputPayment());
   form.append(renderInputCost());
 
-  return form;
+  docFrag.append(form);
+  return docFrag;
 }
 
 function renderInputName() {
+  let docFrag = document.createDocumentFragment();
   let inputBlock = document.createElement('div');
   inputBlock.classList.add('input-block');
   
@@ -104,10 +111,12 @@ function renderInputName() {
   inputBlock.append(label);
   inputBlock.append(input);
   inputBlock.append(validationError);
-  return inputBlock;
+  docFrag.append(inputBlock);
+  return docFrag;
 }
 
 function renderInputSurname() {
+  let docFrag = document.createDocumentFragment();
   let inputBlock = document.createElement('div');
   inputBlock.classList.add('input-block');
   
@@ -131,10 +140,12 @@ function renderInputSurname() {
   inputBlock.append(label);
   inputBlock.append(input);
   inputBlock.append(validationError);
-  return inputBlock;
+  docFrag.append(inputBlock);
+  return docFrag;
 }
 
 function renderInputDate() {
+  let docFrag = document.createDocumentFragment();
   let inputBlock = document.createElement('div');
   inputBlock.classList.add('input-block');
   
@@ -162,10 +173,12 @@ function renderInputDate() {
   inputBlock.append(label);
   inputBlock.append(input);
   inputBlock.append(validationError);
-  return inputBlock;
+  docFrag.append(inputBlock);
+  return docFrag;
 }
 
 function renderInputStreet() {
+  let docFrag = document.createDocumentFragment();
   let inputBlock = document.createElement('div');
   inputBlock.classList.add('input-block');
   
@@ -189,10 +202,12 @@ function renderInputStreet() {
   inputBlock.append(label);
   inputBlock.append(input);
   inputBlock.append(validationError);
-  return inputBlock;
+  docFrag.append(inputBlock);
+  return docFrag;
 }
 
 function renderInputHouse() {
+  let docFrag = document.createDocumentFragment();
   let inputBlock = document.createElement('div');
   inputBlock.classList.add('input-block');
   
@@ -216,10 +231,12 @@ function renderInputHouse() {
   inputBlock.append(label);
   inputBlock.append(input);
   inputBlock.append(validationError);
-  return inputBlock;
+  docFrag.append(inputBlock);
+  return docFrag;
 }
 
 function renderInputFlat() {
+  let docFrag = document.createDocumentFragment();
   let inputBlock = document.createElement('div');
   inputBlock.classList.add('input-block');
   
@@ -243,10 +260,12 @@ function renderInputFlat() {
   inputBlock.append(label);
   inputBlock.append(input);
   inputBlock.append(validationError);
-  return inputBlock;
+  docFrag.append(inputBlock);
+  return docFrag;
 }
 
 function renderInputGift() {
+  let docFrag = document.createDocumentFragment();
   let inputBlock = document.createElement('div');
   inputBlock.classList.add('input-block');
   
@@ -316,10 +335,12 @@ function renderInputGift() {
   inputBlock.append(divThree);
   inputBlock.append(divFour);
 
-  return inputBlock;
+  docFrag.append(inputBlock);
+  return docFrag;
 }
 
 function renderInputPayment() {
+  let docFrag = document.createDocumentFragment();
   let inputBlock = document.createElement('div');
   inputBlock.classList.add('input-block');
   
@@ -360,10 +381,12 @@ function renderInputPayment() {
   inputBlock.append(divOne);
   inputBlock.append(divTwo);
 
-  return inputBlock;
+  docFrag.append(inputBlock);
+  return docFrag;
 }
 
 function renderInputCost() {
+  let docFrag = document.createDocumentFragment();
   let inputBlock = document.createElement('div');
   inputBlock.classList.add('input-block');
   
@@ -376,7 +399,8 @@ function renderInputCost() {
 
   inputBlock.append(label);
   inputBlock.append(input);
-  return inputBlock;
+  docFrag.append(inputBlock);
+  return docFrag;
 }
 
 function submitOrder() {

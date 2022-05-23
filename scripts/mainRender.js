@@ -78,7 +78,7 @@ function sectionCatalog() {
   cartWrapper.classList.add('wrapper');
   let CartH2 = document.createElement('h2');
   CartH2.classList.add('catalog-title');
-  CartH2.textContent = 'Catalog';
+  CartH2.textContent = 'My bag';
   let dropArea = document.createElement('div');
   dropArea.classList.add('drop-area');
   let dropMessage = document.createElement('div');

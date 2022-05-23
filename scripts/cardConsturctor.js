@@ -2,6 +2,8 @@ import popupConstructor from "./popupConstructor.js";
 import stage from "./stage.js";
 export default function cardConstructor(author, imgLink, title, price, description) {
   
+  let docFrag = document.createDocumentFragment();
+
   let dropArea = document.querySelector('.drop-area')
 
   let card = document.createElement('div');
@@ -29,8 +31,8 @@ export default function cardConstructor(author, imgLink, title, price, descripti
 
   let buttonAdd = document.createElement('button')
   buttonAdd.classList.add('btn-add');
-  buttonAdd.setAttribute('title', 'Add to cart');
-  buttonAdd.textContent = 'ADD TO CART'
+  buttonAdd.setAttribute('title', 'Add to bag');
+  buttonAdd.textContent = 'ADD TO BAG'
   buttonAdd.addEventListener('click', () => stage(title, author, price, imgLink));
 
   let buttonRead = document.createElement('button')
@@ -58,5 +60,6 @@ export default function cardConstructor(author, imgLink, title, price, descripti
     stage(drop[0], drop[1], drop[2], drop[3]);
   })
 
-  return card;
+  docFrag.append(card);
+  return docFrag;
 }

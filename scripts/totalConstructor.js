@@ -1,4 +1,7 @@
 export default function totalConstructor(cost) {
+
+  let docFrag = document.createDocumentFragment();
+  
   let totalContainer = document.createElement('div');
   totalContainer.classList.add('total-container');
 
@@ -15,7 +18,7 @@ export default function totalConstructor(cost) {
 
   let button = document.createElement('button');
   button.classList.add('btn-check');
-  button.textContent = 'Check out';
+  button.textContent = 'Confirm order';
   button.addEventListener('click', () => {
     sessionStorage.setItem('stage', JSON.stringify(window.stage));
     window.location.href='./checkout.html';
@@ -28,5 +31,7 @@ export default function totalConstructor(cost) {
   totalContainer.append(totalCostContainer);
   totalContainer.append(button);
 
-  return totalContainer;
+  docFrag.append(totalContainer);
+
+  return docFrag;
 }

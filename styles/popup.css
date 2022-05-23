@@ -21,8 +21,8 @@
   position: fixed;
   left: 50%;
   top: 50%;
-  margin-top: -250px;  /* Negative half of height. */
-  margin-left: -380px;  /* Negative half of width. */
+  margin-top: -250px; 
+  margin-left: -380px; 
   width: 760px;
   height: fit-content;
   height: 500px;
@@ -41,7 +41,27 @@
     transform: translateX(0);
   }
 }
+.close-popup {
+  display: block;
+  top: -10px;
+  left: -10px;
+  width: 30px;
+  height: 30px;
+  background-color: #ffffff;
+  position: absolute;
 
+  background-image: url('../assets/svg/close.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 30px;
+
+  cursor: pointer;
+  transition: 0.3s;
+}
+.close-popup:hover,
+.popup-backdrop:hover ~ .popup .close-popup {
+  background-color: #faea68;
+}
 .popup-container {
   margin: 24px;
   display: flex;
